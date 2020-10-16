@@ -1,56 +1,94 @@
-#main {
-    background-color: lightgray;
-    padding: 15px;
-    border-radius: 10px;
-    overflow: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-header {
-    text-align: center;
-    padding-bottom: 20px;
+ul {
+  list-style: none;
 }
-
-#img-div {
-    background-color: white;
-    padding: 30px;
-    text-align: center;
-    width: auto;
-}
-
-#image {
-    display: block;
-    margin: auto;
-    width: 70%;
-    max-width: 800px;
-}
-
-#list {
-    position: relative;
-    left: 25%;
-}
-
-p {
-    position: relative;
-    left: 5%;
-    padding-right: 10%;
-}
-
-.button {
-    background-color: gray;
-    font-weight: bold;
-    color: black;
-    position: relative;
-    left: 40%;
-    padding: 5px;
-    border: 2px solid black;
-}
-
-.button:hover {
-    background-color: rgb(250, 250, 250);
-    color: black;
-    border: 2px solid black;
-} 
-
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 2rem;
+}
+#main {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+#img-div {
+  display: none;
+}
+section::before {
+  content: "";
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Neville_Goddard.jpg/220px-Neville_Goddard.jpg') center/cover no-repeat;
+  height: 500px;
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width:793px) {
+  #main {
+    background: #fff;
+    width: 80vw;
+    padding: 0 1em;
+  }
+  #img-div {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  #image {
+    max-width: 80vw;
+  }
+  section::before {
+    display: none;
+  }
+}
+#list h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#list ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80vw;
+  text-align: center;
+}
+#list {
+  margin-bottom: 1.5rem;
+}
+ul li {
+  padding: 1.25em;
+}
+#bio::first-letter {
+  font-size: 1.8rem;
+}
+#bio {
+  letter-spacing: 1pt;
+  line-height: 1.2rem;
+  text-indent: 20px;
+  margin-bottom: 0.5em;
+}
+p:nth-of-type(2) {
+  line-height: 1.2rem;
+  letter-spacing: 1pt;  
+  text-indent: 20px;
+  margin-bottom: 0.5em;
+}
+p:nth-of-type(3) {
+  line-height: 1.3rem;
+  letter-spacing: 1pt;  
+  text-indent: 20px;
 }
